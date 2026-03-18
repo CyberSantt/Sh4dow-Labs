@@ -17,7 +17,7 @@ The objective is to analyze authentication behavior, generate logs, and detect a
 ---
 
 ## 🎯 Objectives
-- - Simulate brute force and password spraying attacks  
+- Simulate brute force and password spraying attacks  
 - Collect and analyze Windows authentication logs  
 - Develop custom detection rules  
 - Validate alerts in the SIEM  
