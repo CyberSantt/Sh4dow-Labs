@@ -1,26 +1,26 @@
-# 🔐 Lab01_Detection_of_Brute_Force_and_Password_Spraying_Attacks_using_Wazuh
+# 🔐 Detection of Brute Force & Password Spraying Attacks using Wazuh
 
 ## 🧠 Skills Demonstrated
-- Log analysis
-- Threat detection
-- SIEM rule creation
-- Attack simulation
+- Log analysis  
+- Threat detection  
+- SIEM rule creation  
+- Attack simulation  
 - Event correlation
 
 ---
 
 ## 📌 Overview
-This lab demonstrates how Brute Force attacks & Password Spraying attacks can be simulated and detected using Wazuh
+This lab demonstrates how brute force and password spraying attacks can be simulated and detected using Wazuh.
 
 The objective is to analyze authentication behavior, generate logs, and detect anomalies through custom SIEM rules.
 
 ---
 
 ## 🎯 Objectives
-- Simulate [attack: brute force / password spraying / etc.]
-- Collect and analyze logs from [Windows / Linux / etc.]
-- Develop custom detection rules
-- Validate alerts in the SIEM
+- - Simulate brute force and password spraying attacks  
+- Collect and analyze Windows authentication logs  
+- Develop custom detection rules  
+- Validate alerts in the SIEM  
 - Understand attacker behavior and detection patterns
 
 ---
@@ -60,17 +60,23 @@ Example command: hydra -L users.txt -P passwords.txt smb://target_ip
 ---
 
 ## 📊 Log Collection
+
 Logs were collected from Windows Security Events:
-    4625 → Failed logon
-    4624 → Successful logon
+
+- **4625** → Failed logon  
+- **4624** → Successful logon  
+
 These events were used to identify authentication anomalies.
 
 ---
 
 ## 🚨 Detection Rules
-- Rule 100500 Detects brute force attacks.
-- Rule 100504 Detects password spraying behavior across multiple users.
-- Rule 100510 Windows Event 4625.
+
+- **Rule 100500** → Detects multiple failed login attempts from a single IP (Brute Force)
+
+- **Rule 100504** → Identifies password spraying behavior across multiple user accounts
+
+- **Rule 100510** → Triggers on Windows Event ID 4625 (failed authentication events)
 
 ---
 
