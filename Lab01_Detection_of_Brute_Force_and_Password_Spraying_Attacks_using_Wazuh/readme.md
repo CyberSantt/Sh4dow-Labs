@@ -56,6 +56,7 @@ Description of the attack:
  - Same password used across accounts
 
 Example command: hydra -L users.txt -P passwords.txt smb://target_ip
+
 ---
 
 ## 📊 Log Collection
